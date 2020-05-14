@@ -1,0 +1,29 @@
+Uma variável é um espaço na memória do computador destinado a um dado que é alterado durante a execução do algoritmo
+
+ex: 
+
+	x = 5 
+
+onde o computador armazena o 5 dentro da variavel x
+
+outro exemplos:
+
+<exemplo
+saida>
+
+>>> y = 10 * 32 + x
+>>> y
+325
+
+>>> x = 345
+>>> x
+345
+
+>>> x = x + 10
+>>> x 
+355
+
+
+além de números inteiros, dentro de variaveis, podem ser guardados:
+
+str (STRING) deve ser entre parentesis tudo aquilo lá do python e voce tem no python tips

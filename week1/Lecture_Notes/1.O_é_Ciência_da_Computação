@@ -1,0 +1,111 @@
+Ciência da computação:
+- Uma nova ciência, surgida em meados do Século 20.
+
+- Engloba aspectos de várias áreas do conhecimento humano:
+	
+	Matemática (a base, fundamento inicial)
+	Engenharia (construir sistemas complexos usando tecnicas de engenharia)
+	Ciências Naturais (metodologia cientifica)
+	Arte (Clean code?)
+	Esporte (pelo fato de ter que praticar muito)
+
+*
+
+	A capacidade de resolver problemas no mundo real, computacionalmente é imprescindivel para um cientista da computação.
+
+*
+
+	Habilidades básicas serão:
+
+- Formular um problema do mundo real em termos computacionais 
+
+- Elaborar uma solução (algoritmo) para esse problema em termos computacionais
+
+- Escrever um programa em uma linguagem de programação que implemente esse algorítmo (para ser executado)
+
+- Testar o programa para verificar se ele realmente resolve o problema de forma correta
+
+
+	Habilidades mais avançadas serão:
+
+- Gerenciar software de grande porte composto por muitos programas, vários deles de grande porte
+
+- Construir software para lidar com grandes quantidades de dados
+	(Big Data, Mineração de Dados, Aprendizado de Máquina)
+
+- Gerenciar equipes de desenvolvimento de software
+
+- Comunicar-se com clientes e usuários para entender seu problemas, dificuldades e necessidades
+
+*
+
+
+	Algoritmo
+
+Algoritmo é uma lista de instruções passo-a-passo para resolver um derterminado problema (receita de bolo)
+
+*
+
+Simplificadamente, em ciencias da computação o que fazemos é 
+
+	Analisar o problema
+	Criar um algoritmo genérico que resolva esse problema
+	Escrever um programa que implemente esse algoritmo
+	Testar o programa para verificar se ele realmente funciona
+
+*
+
+
+	Linguagens de programação 
+
+- Linguagens formais, precisas e cuhas instruções pordem ser executadas por um computador 
+
+	- Linguagem de baixo nível
+		linguagem de máquina 
+		linguagem de montagem (Assembly)
+
+	- Linguagem de alto nível 
+		Python
+		Java
+		ruby
+		C/C++
+		Javascript
+
+
+
+	Linguagens Interpretadas
+
+Código Fonte -> Interpretador -> Saída 
+
+	Linguagem Compiladas
+
+Código Fonte -> Compilador -> Código Objeto (001, máquina) -> Executor (proprio sistema operacional) -> Saída
+
+Linguagem Interpretadas e Compiladas
+	ex: Java e Python
+
+	Os passos que essas linguagens seguem são:
+1) Antes de iniciar a execução do programa, um compilador traduz o código-fonte para bytecode (código em bytes, 001).
+
+2) Ao iniciar a execução do programa, o interpretador lê os bytecodes um-a-um executando os comandos correspondentes.
+
+
+
+**************************************************************
+
+
+
+
+tips de roda pé:
+	Habilidades de solucionar problemas
+		Formular questões
+		Pensar criativamente
+		Expressar a solução de forma clara e precisa
+
+	Aprender a programar: um bom jeito de iniciar o aprendizado em Computação é:
+
+aprender a escrever códigos simples numa linguagem de alto nível
+executar pequenos programas
+aprender novos conceitos incrementalmentes e ir aumentando a sofisticação e o tamanho dos programas progressivamente
+
+

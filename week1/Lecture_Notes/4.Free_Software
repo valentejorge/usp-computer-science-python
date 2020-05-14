@@ -1,0 +1,84 @@
+Computação:
+	Simplificadamente, em Computação o que fazemos é:
+	- Analisar o problema
+	- Criar um algoritmo genérico que resolva esse problema
+	- Escrever um programa que implemente esse algoritmo
+	- Testar esse programa para verificar se ele realmente funciona
+
+*
+
+Programas são peculiares:
+
+	- Um livro contém conhecimento
+		- Esse conhecimento pode ser sobre ferramentas
+	- Uma ferramenta (um martelo ou máquina) tem utilidade
+		- Mas o conhecimento que a gerou não é acessível diretamente
+
+*
+	Um programa de computador é as duas coisas:
+		- Ele contém o conhecimento sobre o problema e sua solução, descritos na linguagem de programação
+		- Ele é uma ferramenta para solucionar o problema quando é executado
+
+	Além disso
+		- Programas podem ser facilmente copiados
+		- Programas podem ser modificados para incorporar melhorias ou resolver problemas novos
+
+	Então 
+		- A mesma ferramenta pode ser usada e adaptada por várias pessoas!
+		- O conhecimento pode ser acessado por todos!
+
+	Mas...
+		- Do ponto de vista lega, programas são protegidos por direitos do autor (copyright)
+			- Metáfora pela qual programas são "comparados" e "vendidos" como se fossem objetos
+		- O uso da ferramenta tem restrições
+			- É preciso pagar pelo uso, alguns tipos de uso podem ser restritos etc
+		- O conhecimento não pode mais ser usado por todos
+			- E muitas vezes o código-fonte é secreto
+
+	O Software Livre:
+
+O software pode e deve ser compartilhado
+
+	- "Se eu posso ajudar meu amigo (oferecendo uma cópia de um programa), por que não fazê-lo?"
+	- "Se meu amigo pode aprender com meu trabalho (analisando o código-fonte de um programa), por que impedi-lo?"
+	- "Se eu e meu amigo trabalharmos juntos, vamos criar mais facilmente um programa que resolva tanto os problemas dele quanto os meus!"
+
+E não precisa nem ser meu amigo, pode ser uma comunidade com pessoas, empresas, governos, universidades...
+
+	Definição:
+
+	Um programa é Software Livre se oferece as 4 liberdades seguintes:
+
+		- Liberdade de executar o programa
+		- Liberdade de estudar e modificar o programa 
+		- Liberdade para redistribuir o programa
+		- Liberdade para melhorar e redistribuir as melhorias ao programa
+
+	Vantagens:
+
+	O Software Livre oferece diversas vantagens:
+
+		- Redução de custo e do risco de desenvolvimento
+			- Não depende de uma única equipe paga por uma única empresa
+		- Qualidade potencialmente maior
+			- Mais desenvolvedores trabalhando no mesmo programa
+			- Mais usuários reportando falhas 
+			- Orgulho pessoal dos desenvolvedores
+		- Permite ao usuário escolher seu fornecedor
+			- Qualquer um com acesso ao código-fonte pode prestar serviços
+
+	Exemplos de Software Livre:
+
+	- Várias linguagens de programação amplamente usadas, como Java, Ruby e Python, são Software Livre
+		- E Várias delas são usadas em cursos introdutórios à programação por sua excelente qualidade, clareza e popularidade
+
+	- Várias ferramentas que você conhece, como o navegador Firefox e quase todo o sistema Android, além de partes fundamentais da infraestrutura de grandes sítios web, como o servidor web Apache e o bando de dados MySQL, são Software Livre
+
+	Saiba mais
+Aproveite para conhecer mais na web!
+
+	A Open Source Iniciative (www.opensource.org) é um grupo dedicados a promover as vantagens comerciais do Software Livre
+
+	A Free Software Foundation (www.fsf.org) trabalha pela expansão do Software Livre e pela conscientização quanto a seus aspectos éticos 
+
+	O Centro de Competências em Software Livre (ccsl.ime.usp.br) agrega as atividades de pesquisa e extensão relacionadas ao Software Livre no IME/USP

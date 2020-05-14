@@ -1,0 +1,40 @@
+Operadores Aritmeticos python são:
+<nome do operador (sinal)>
+
+Adição (+)
+
+Subtração (-)
+
+Multiplicação (*)
+
+Divisão (/)
+
+Potenciação (**)
+
+Divisão Inteira (//)
+
+Resto da Divisão (%)
+
+
+Para comparar:
+
+Igual (==)
+
+Diferente (!=)
+
+Maior (>)
+
+Menor (<)
+
+Maior-ou-Igual (>=)
+
+Menor-ou-Igual (<=)
+
+
+-------
+
+len() tamanho do texto
+str() converter para string
+int() converter para numero inteiro
+float() converter para float
+
