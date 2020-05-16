@@ -1,0 +1,7 @@
+o nome bool vem em homenagem ao george bool, o cara que criou a algebra que envolve apenas valores como on off, true falte, 0 1.
+
+para bool nos podemos usar 
+and para &
+or para ou 
+not (not False == True) (not True == False) ele inverte
+
