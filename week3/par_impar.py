@@ -1,6 +1,6 @@
 n = int(input('Escreva um número '))
 n = n % 2
 if n == 0:
-    print ('Par')
+    print('Par')
 else:
-    print ('Ímpar')
+    print('Ímpar')

@@ -14,6 +14,6 @@ while tamanho != 0:
     else:
         não = 'não'
 if (não == 'não' and sim == 'null') or (t == 1):
-    print ('não')
+    print('não')
 elif sim == 'sim':
-    print ('sim')
+    print('sim')

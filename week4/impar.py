@@ -6,5 +6,5 @@ impar = 0
 while repetição != 0:
     impar += 1
     if not impar % 2 == 0:
-        print (impar)
+        print(impar)
     repetição -= 1
