@@ -1,11 +1,8 @@
-numero = int(input('Digite o valor de n: '))
+from funcFatorial import fatorial
 
-subtração = numero - 1
+n = int(input('Qual o valor de n? '))
+k = int(input('Qual o valor de k? '))
 
-if not numero == 0:
-    while subtração != 0:
-        numero = numero * (subtração)
-        subtração -= 1
-else:
-    numero = 1
-print(numero)
+equals = (fatorial(n)) / (fatorial(k) * fatorial(n - k))
+
+print(equals)
