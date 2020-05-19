@@ -1,11 +1,13 @@
-numero = int(input('Digite o valor de n: '))
+def fatorial(n):
+    fat = n
 
-subtração = numero - 1
+    subtração = n - 1
 
-if not numero == 0:
-    while subtração != 0:
-        numero = numero * (subtração)
-        subtração -= 1
-else:
-    numero = 1
-print(numero)
+    if not n == 0:
+        while subtração != 0:
+            n = n * (subtração)
+            subtração -= 1
+    else:
+        n = 1
+    print(n)
+    return fat
