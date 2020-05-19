@@ -10,4 +10,4 @@ while repetição != 0:
     resultado += soma
     repetição -= 1
 
-print(resultado)
+print (resultado)

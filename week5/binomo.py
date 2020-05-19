@@ -5,4 +5,4 @@ k = int(input('Qual o valor de k? '))
 
 equals = (fatorial(n)) / (fatorial(k) * fatorial(n - k))
 
-print(equals)
+print (equals)
