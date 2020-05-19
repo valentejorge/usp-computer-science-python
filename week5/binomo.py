@@ -1,13 +1,8 @@
-def fatorial(n):
-    fat = n
+from funcFatorial import fatorial
 
-    subtração = n - 1
+n = int(input('Qual o valor de n? '))
+k = int(input('Qual o valor de k? '))
 
-    if not n == 0:
-        while subtração != 0:
-            n = n * (subtração)
-            subtração -= 1
-    else:
-        n = 1
-    print(n)
-    return fat
+equals = (fatorial(n)) / (fatorial(k) * fatorial(n - k))
+
+print(equals)
