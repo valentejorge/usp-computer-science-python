@@ -5,4 +5,4 @@ tarifa = float(input('Qual a tarifa cobrada na sua região? '))
 
 Econsumida = (watts / 1000) * horas * dias * tarifa
 
-print(f'o custo é R$ {Econsumida}')
+print (f'o custo é R$ {Econsumida}')

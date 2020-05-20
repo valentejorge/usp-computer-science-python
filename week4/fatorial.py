@@ -8,4 +8,4 @@ if not numero == 0:
         subtração -= 1
 else:
     numero = 1
-print(numero)
+print (numero)

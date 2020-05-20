@@ -1,0 +1,28 @@
+Por que testar?
+	Seres humanos erram
+	Programas contém erros (bugs)
+	> Sintaxe
+	> Lógica
+	Software robusto deve conter o mínimo possível de erros
+	Bugs podem causar catástrofes
+	Bugs podem causar desconforto
+	> E fazer com qu e seu cliente abandone seu produto
+
+Como testar?
+	Testes manuais
+	> Cansativo
+	> Você vai testar apenas alguns casos 
+	> Você vai testar apenas algumas vezes
+
+	Testes automatizados
+	> Bateria de testes que cobre o máximo possível do seu código
+	> Executada rotineiramente várias vezes por dia 
+
+Arcabouços de Testes Automatizados
+
+	> Pytest
+	> docs.pytest.org
+
+	> Cosidera que arquivos do tipo test_*.py e *_test.py são arquivos de teste
+	> Executa funções e métdos do tipo test_*
+	> Considera classes do tipo Test*	
