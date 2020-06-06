@@ -12,10 +12,16 @@ def partida():
     n = int(input('Quantas peças? '))
     m = int(input('Limite de peças por jogada? '))
 
+    #define quem vai executar a primeira jogada
     if n % (m + 1) == 0:
         print('\nVocê começa!')
-        retirada = usuario_escolhe_jogada(n, m)
+        retirada = n
+        while retirada == 0 or retirada > m or retirada < 0:
+            retirada = usuario_escolhe_jogada(n, m)
+            if retirada == 0 or retirada > m or retirada < 0:
+                print('\n***Jogada Inválida!***')
         n -= retirada
+        print(f'agora restam {n} peças no tabuleiro')
         vez = 'computador'
     else:
         print('\nComputador começa!')
@@ -23,7 +29,7 @@ def partida():
         n -= retirada
 
         print(f'\no computador tirou {retirada} peças')
-        print(f'\nagora restam {n} peças no tabuleiro')
+        print(f'agora restam {n} peças no tabuleiro')
         vez = 'usuario'
 
     while n != 0:
@@ -32,19 +38,27 @@ def partida():
             n -= retirada
 
             print(f'\no computador tirou {retirada} peças')
-            print(f'\nagora restam {n} peças no tabuleiro')
+            if n != 0:
+                print(f'agora restam {n} peças no tabuleiro')
+            else:
+                print('\nFim do Jogo! O computador ganhou!')
 
             vez = 'usuario'
         else:
-            retirada = usuario_escolhe_jogada(n, m)
+            retirada = n
+            while retirada == 0 or retirada > m or retirada < 0:
+                retirada = usuario_escolhe_jogada(n, m)
+                if retirada == 0 or retirada > m or retirada < 0:
+                    print('\n***Jogada Inválida!***')
             n -= retirada
+            print(f'agora restam {n} peças no tabuleiro')
             vez = 'computador'
 
 
 def computador_escolhe_jogada(n, m):
     computador_retirou = n
 
-    while computador_retirou > m and not computador_retirou % (m + 1) == 0:
+    while computador_retirou >= m and not computador_retirou % (m + 1) == 0:
         computador_retirou -= 1
 
     computador_return = n - computador_retirou
@@ -53,7 +67,7 @@ def computador_escolhe_jogada(n, m):
 
 
 def usuario_escolhe_jogada(n, m):
-    jogador_retirou = int(input('Quantas peças você vai tirar? '))
+    jogador_retirou = int(input('\nQuantas peças você vai tirar? '))
     return jogador_retirou
 
 inicio()
