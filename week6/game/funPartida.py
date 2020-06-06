@@ -5,8 +5,20 @@ def inicio():
           print('\nvocê escolheu uma partida isolada!\n')
           partida()
     else:
-          print('\nvocê escolheu um campeonato!\n')
-          print('infelizmente n tem capeonato ainda oporra')
+        campeonato()
+
+def campeonato():
+    rodada = 1
+    contador = 3
+    print('você escolheu campeonato!')
+    while contador != 0:
+        print(f'\n**** rodada {rodada} ****\n')
+        partida()
+        rodada += 1
+        contador -= 1
+    print('**** final do campeonato! ****')
+    print('placar: você 0 x 3 computador')
+
 
 def partida():
     n = int(input('Quantas peças? '))
@@ -69,5 +81,3 @@ def computador_escolhe_jogada(n, m):
 def usuario_escolhe_jogada(n, m):
     jogador_retirou = int(input('\nQuantas peças você vai tirar? '))
     return jogador_retirou
-
-inicio()
