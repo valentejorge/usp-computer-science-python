@@ -10,9 +10,10 @@ def inicio():
 def campeonato():
     rodada = 1
     contador = 3
-    print('você escolheu campeonato!')
+    print('\nvocê escolheu campeonato!')
+    #repete 3 vezes o titulo mostrando em qual rodada você está
     while contador != 0:
-        print(f'\n**** rodada {rodada} ****\n')
+        print(f'\n**** Rodada {rodada} ****\n')
         partida()
         rodada += 1
         contador -= 1
@@ -21,8 +22,14 @@ def campeonato():
 
 
 def partida():
-    n = int(input('Quantas peças? '))
-    m = int(input('Limite de peças por jogada? '))
+    regra = False
+    while regra == False:
+        n = int(input('Quantas peças? n'))
+        m = int(input('Limite de peças por jogada? '))
+        if n < m or n == m or n <= 0 or m <= 0:
+            print('Oops! Valores inválidos! Tente de novo.')
+        else:
+            regra = True
 
     #define quem vai executar a primeira jogada
     if n % (m + 1) == 0:
@@ -31,7 +38,7 @@ def partida():
         while retirada == 0 or retirada > m or retirada < 0:
             retirada = usuario_escolhe_jogada(n, m)
             if retirada == 0 or retirada > m or retirada < 0:
-                print('\n***Jogada Inválida!***')
+                print('Oops! Jogada inválida! Tente de novo.')
         n -= retirada
         print(f'agora restam {n} peças no tabuleiro')
         vez = 'computador'
@@ -48,8 +55,8 @@ def partida():
         if vez == 'computador':
             retirada = computador_escolhe_jogada(n, m)
             n -= retirada
-
             print(f'\no computador tirou {retirada} peças')
+
             if n != 0:
                 print(f'agora restam {n} peças no tabuleiro')
             else:
@@ -61,7 +68,7 @@ def partida():
             while retirada == 0 or retirada > m or retirada < 0:
                 retirada = usuario_escolhe_jogada(n, m)
                 if retirada == 0 or retirada > m or retirada < 0:
-                    print('\n***Jogada Inválida!***')
+                    print('\nOops! Jogada inválida! Tente de novo.')
             n -= retirada
             print(f'agora restam {n} peças no tabuleiro')
             vez = 'computador'
@@ -69,11 +76,12 @@ def partida():
 
 def computador_escolhe_jogada(n, m):
     computador_retirou = n
-
     while computador_retirou >= m and not computador_retirou % (m + 1) == 0:
         computador_retirou -= 1
-
     computador_return = n - computador_retirou
+
+    if computador_return == 0:
+        computador_return = 1
 
     return computador_return
 
