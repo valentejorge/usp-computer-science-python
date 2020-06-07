@@ -20,11 +20,18 @@ def campeonato():
     print('\n**** final do campeonato! ****')
     print('\nplacar: você 0 x 3 computador')
 
-def partida():
-    n = int(input('Quantas peças? '))
-    m = int(input('Limite de peças por jogada? '))
-    #define quem vai executar a primeira jogada
 
+def partida():
+    regra = False
+    while regra == False:
+        n = int(input('Quantas peças? '))
+        m = int(input('Limite de peças por jogada? '))
+        if n < m or n == m or n <= 0 or m <= 0:
+            print('Oops! Valores inválidos! Tente de novo.')
+        else:
+            regra = True
+
+    #define quem vai executar a primeira jogada
     if n % (m + 1) == 0:
         print('\nVocê começa!')
         retirada = n
@@ -35,7 +42,6 @@ def partida():
         n -= retirada
         print(f'agora restam {n} peças no tabuleiro')
         vez = 'computador'
-
     else:
         print('\nComputador começa!')
         retirada = computador_escolhe_jogada(n, m)
@@ -43,8 +49,6 @@ def partida():
 
         print(f'\no computador tirou {retirada} peças')
         print(f'agora restam {n} peças no tabuleiro')
-        if n == 0:
-            print('\nFim do Jogo! O computador ganhou!')
         vez = 'usuario'
 
     while n != 0:
@@ -69,15 +73,12 @@ def partida():
             print(f'agora restam {n} peças no tabuleiro')
             vez = 'computador'
 
+
 def computador_escolhe_jogada(n, m):
     computador_retirou = n
     if computador_retirou == m:
         computador_return = m
     elif computador_retirou < m:
-        computador_return = computador_retirou
-    #essa aqui ta dando erro
-    elif computador_retirou % (m + 1) == 0:
-        computador_retirou = m
         computador_return = computador_retirou
     else:
         while computador_retirou >= m and not computador_retirou % (m + 1) == 0:
@@ -89,8 +90,7 @@ def computador_escolhe_jogada(n, m):
 
     return computador_return
 
+
 def usuario_escolhe_jogada(n, m):
     jogador_retirou = int(input('\nQuantas peças você vai tirar? '))
     return jogador_retirou
-
-#inicio()
