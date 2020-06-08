@@ -1,0 +1,5 @@
+Repetições Encaixadas
+
+while <CONDIÇÃO>:
+    while <CONDIÇÃO1>:
+        <COMANDO>
