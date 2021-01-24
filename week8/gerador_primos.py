@@ -10,7 +10,6 @@ def primo(x):
     else:
         return True
 
-
 limite = int(input("Limite de primos: "))
 
 n = 2
