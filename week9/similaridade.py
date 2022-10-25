@@ -76,7 +76,47 @@ def compara_assinatura(as_a, as_b):
 
 def calcula_assinatura(texto):
     '''IMPLEMENTAR. Essa funcao recebe um texto e deve devolver a assinatura do texto.'''
-    pass
+    
+    texto_separado = separa_palavras(texto)
+
+    total_de_palavras = len(texto_separado)
+
+    def contar_letras(texto_separado):
+
+        somador = 0
+        total = 0
+
+        for palavras in texto_separado:
+            somador = len(palavras)
+            total += somador
+        print(total)
+        return total
+
+
+    tam_medio_palavra = contar_letras(texto_separado) / total_de_palavras
+
+    relacao_type_token = n_palavras_diferentes(texto_separado) / total_de_palavras
+
+    razao_hapax_legonama = n_palavras_unicas(texto_separado) / total_de_palavras
+
+    tam_medio_sentença = 0
+
+    complexidade_sentença = 0
+
+    tam_medio_frase = 0
+
+    print('Tamanho Médio de Palavras: ', tam_medio_palavra)
+
+    print('Relação Type-Token: ', relacao_type_token)
+
+    print('Razão Hapax Legonama: ', razao_hapax_legonama)
+
+calcula_assinatura('o gato caçava o rato')
+
+print()
+print()
+print()
+calcula_assinatura('Voltei-me para ela; Capitu tinha os olhos no chão. Ergueu-os logo, devagar, e ficamos a olhar um para o outro... Confissão de crianças, tu valias bem duas ou três páginas, mas quero ser poupado. Em verdade, não falamos nada; o muro falou por nós. Não nos movemos, as mãos é que se estenderam pouco a pouco, todas quatro, pegando-se, apertando-se, fundindo-se. Não marquei a hora exata daquele gesto. Devia tê-la marcado; sinto a falta de uma nota escrita naquela mesma noite, e que eu poria aqui com os erros de ortografia que trouxesse, mas não traria nenhum, tal era a diferença entre o estudante e o adolescente. Conhecia as regras do escrever, sem suspeitar as do amar; tinha orgias de latim e era virgem de mulheres.')
 
 def avalia_textos(textos, ass_cp):
     '''IMPLEMENTAR. Essa funcao recebe uma lista de textos e uma assinatura ass_cp e deve devolver o numero (1 a n) do texto com maior probabilidade de ter sido infectado por COH-PIAH.'''
