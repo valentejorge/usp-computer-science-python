@@ -71,7 +71,21 @@ def n_palavras_diferentes(lista_palavras):
 
 def compara_assinatura(as_a, as_b):
     '''IMPLEMENTAR. Essa funcao recebe duas assinaturas de texto e deve devolver o grau de similaridade nas assinaturas.'''
-    pass
+
+    lista_do_resultado = []
+    operador = []
+
+    for i in range(6):
+        operador = as_a[i] - as_b[i]
+        operador = abs(operador)
+        lista_do_resultado.append(operador)
+
+    resultados_somados = sum(lista_do_resultado)
+
+    divisao_por_6 = resultados_somados / 6
+
+    return(divisao_por_6)
+
 
 def calcula_assinatura(texto):
 
@@ -182,14 +196,22 @@ def calcula_assinatura(texto):
 
 def avalia_textos(textos, ass_cp):
     '''IMPLEMENTAR. Essa funcao recebe uma lista de textos e uma assinatura ass_cp e deve devolver o numero (1 a n) do texto com maior probabilidade de ter sido infectado por COH-PIAH.'''
-    pass
+    
+    index = 0
+    resultado_assinatura = []
+    for i in textos:
+        operador = calcula_assinatura(textos[index])
+        resultado_assinatura.append(operador)
+        index += 1
+    
+    closest = min(resultado_assinatura, key=lambda x:abs(x-ass_cp))
 
-
-
-
-
-
-
+    indice = 0
+    for elemento in resultado_assinatura:
+        if elemento == closest:
+            position = indice
+        indice += 1
+    return position
 
 # def testa_calcula_assinatura(texto, valor_esperado):
     # valor_calculdado = calcula_assinatura(texto)
