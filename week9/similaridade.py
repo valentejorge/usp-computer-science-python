@@ -197,40 +197,27 @@ def calcula_assinatura(texto):
 
 def avalia_textos(textos, ass_cp):
     '''IMPLEMENTAR. Essa funcao recebe uma lista de textos e uma assinatura ass_cp e deve devolver o numero (1 a n) do texto com maior probabilidade de ter sido infectado por COH-PIAH.'''
+
     index = 0
     resultado_assinatura = []
+
     for i in textos:
         operador = calcula_assinatura(textos[index])
         resultado_assinatura.append(operador)
         index += 1
     
     indice = 1
-    contador = 1
     primeira_comparacao = compara_assinatura(resultado_assinatura[0], ass_cp)
-    for elemento in resultado_assinatura:
-        a = compara_assinatura(elemento, ass_cp)
-        print()
-        print('elemento: ', elemento)
-        print('primeira_comparacao:', primeira_comparacao)
-        print('a: ', a)
-        print()
-        if a <= primeira_comparacao:
-            primeira_comparacao = a
-            print('YESBABY')
-            res = a
-            b = elemento
-            print('b: ', b)
-            print('res: ', res)
-            incide = contador
-            print(indice)
-        contador += 1
-        print('indece:', indice)
-        print('contador: ', contador)
-    print('resultado: ', resultado_assinatura.index(b) + 1)
-    resultado = resultado_assinatura.index(b) + 1
 
-    print('resultado_assinatura: ', resultado_assinatura)
-    print('resultado: ', resultado_assinatura.index([4.102564102564102, 0.6923076923076923, 0.5128205128205128, 101.0, 2.5, 39.8]))
+    for elemento in resultado_assinatura:
+        comparado = compara_assinatura(elemento, ass_cp)
+
+        if comparado <= primeira_comparacao:
+            primeira_comparacao = comparado
+            menor_valor = elemento
+
+    resultado = resultado_assinatura.index(menor_valor) + 1
+
     return resultado
 
 
@@ -248,7 +235,7 @@ def printa_calcula_assinatura(texto):
     print(a)
 
 
-printa_calcula_assinatura('Dona Aranha subiu pela parede veio a chuva forte e a derrubou já passou a chuva e o sol já vem surgindo e a dona aranha continua a subir ela é teimosa, desobediente.  sobe, sobe, sobe nunca está contente!')
+# printa_calcula_assinatura('Dona Aranha subiu pela parede veio a chuva forte e a derrubou já passou a chuva e o sol já vem surgindo e a dona aranha continua a subir ela é teimosa, desobediente.  sobe, sobe, sobe nunca está contente!')
 
 lista_de_textos = [
         'Um, dois, três e quatro, dobro a perna e dou um salto, viro e me viro ao revés e se eu caio conto até dez. Depois, essa lenga-lenga toda recomeça.  Puxa vida, ora essa!  Vivo na ponta dos pés',
