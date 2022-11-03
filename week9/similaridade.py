@@ -144,8 +144,8 @@ def calcula_assinatura(texto):
         resultado = caracteres / n_de_palavras 
         return resultado
 
-    print('tamanho_medio_palavras: ', end='')
-    print(tam_medio_palavra(n_de_caracteres, n_de_palavras))
+    # print('tamanho_medio_palavras: ', end='')
+    # print(tam_medio_palavra(n_de_caracteres, n_de_palavras))
 
     def relacao_type_token(n_de_palavras_diferente, n_de_palavras):
         resultado = n_de_palavras_diferente / n_de_palavras
@@ -194,9 +194,9 @@ def calcula_assinatura(texto):
 
     return [a0, a1, a2, a3, a4, a5]
 
+
 def avalia_textos(textos, ass_cp):
     '''IMPLEMENTAR. Essa funcao recebe uma lista de textos e uma assinatura ass_cp e deve devolver o numero (1 a n) do texto com maior probabilidade de ter sido infectado por COH-PIAH.'''
-    
     index = 0
     resultado_assinatura = []
     for i in textos:
@@ -204,14 +204,60 @@ def avalia_textos(textos, ass_cp):
         resultado_assinatura.append(operador)
         index += 1
     
-    closest = min(resultado_assinatura, key=lambda x:abs(x-ass_cp))
-
-    indice = 0
+    indice = 1
+    contador = 1
+    primeira_comparacao = compara_assinatura(resultado_assinatura[0], ass_cp)
     for elemento in resultado_assinatura:
-        if elemento == closest:
-            position = indice
-        indice += 1
-    return position
+        a = compara_assinatura(elemento, ass_cp)
+        print()
+        print('elemento: ', elemento)
+        print('primeira_comparacao:', primeira_comparacao)
+        print('a: ', a)
+        print()
+        if a <= primeira_comparacao:
+            primeira_comparacao = a
+            print('YESBABY')
+            res = a
+            b = elemento
+            print('b: ', b)
+            print('res: ', res)
+            incide = contador
+            print(indice)
+        contador += 1
+        print('indece:', indice)
+        print('contador: ', contador)
+    print('resultado: ', resultado_assinatura.index(b) + 1)
+    resultado = resultado_assinatura.index(b) + 1
+
+    print('resultado_assinatura: ', resultado_assinatura)
+    print('resultado: ', resultado_assinatura.index([4.102564102564102, 0.6923076923076923, 0.5128205128205128, 101.0, 2.5, 39.8]))
+    return resultado
+
+
+
+def testa_avalia_textos(textos, ass_cp, valor_esperado):
+    valor_calculado = avalia_textos(textos, ass_cp)
+    if valor_calculado != valor_esperado:
+        print('ERRO')
+        print('Valor Calculado: ', valor_calculado, 'Valor Esperado: ', valor_esperado)
+    else:
+        print('passou!')
+
+def printa_calcula_assinatura(texto):
+    a = calcula_assinatura(texto)
+    print(a)
+
+
+printa_calcula_assinatura('Dona Aranha subiu pela parede veio a chuva forte e a derrubou já passou a chuva e o sol já vem surgindo e a dona aranha continua a subir ela é teimosa, desobediente.  sobe, sobe, sobe nunca está contente!')
+
+lista_de_textos = [
+        'Um, dois, três e quatro, dobro a perna e dou um salto, viro e me viro ao revés e se eu caio conto até dez. Depois, essa lenga-lenga toda recomeça.  Puxa vida, ora essa!  Vivo na ponta dos pés',
+        'Dona Aranha subiu pela parede veio a chuva forte e a derrubou já passou a chuva e o sol já vem surgindo e a dona aranha continua a subir ela é teimosa, desobediente.  sobe, sobe, sobe nunca está contente!', 
+        'Celina ama os animais. Ela tem uma gatinha chamada Viola. Viola teve um filhotinho e Celina o chamou de Fulota. Viola passa o dia brincando com o Fulota. Quando Celina chega da escola ela vai correndo pegar Fulota no colo. Viola fica perto, olhando sua dona e seu filhotinho com um olhar mais carinhoso do mundo.'
+        ]
+testa_avalia_textos(lista_de_textos, [4.102564102564102, 0.6923076923076923, 0.5128205128205128, 101.0, 2.5, 39.8], 2)
+
+
 
 # def testa_calcula_assinatura(texto, valor_esperado):
     # valor_calculdado = calcula_assinatura(texto)
